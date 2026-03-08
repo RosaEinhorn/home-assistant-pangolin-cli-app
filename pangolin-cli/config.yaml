@@ -22,10 +22,12 @@ options:
   PANGOLIN_ENDPOINT: "https://app.pangolin.net"
   CLIENT_ID: ""
   CLIENT_SECRET: ""
+  EXTRA_FLAGS: ""
 schema:
   PANGOLIN_ENDPOINT: url
   CLIENT_ID: str
   CLIENT_SECRET: password
+  EXTRA_FLAGS: str?
 map:
   - config:rw
 hassio_api: true
