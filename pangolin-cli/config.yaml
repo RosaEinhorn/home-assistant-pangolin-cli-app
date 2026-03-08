@@ -1,0 +1,36 @@
+name: "Pangolin CLI"
+version: "1.0.0"
+slug: "pangolin-cli"
+description: "Home Assistant app (formerly add-on) that connects to private Pangolin resources using the Pangolin CLI client"
+url: "https://github.com/RosaEinhorn/home-assistant-pangolin-cli-app"
+icon: "icon.png"
+arch:
+  - amd64
+  - armv7
+  - armhf
+  - aarch64
+startup: system
+boot: auto
+host_network: true
+privileged:
+  - NET_ADMIN
+  - NET_RAW
+  - SYS_ADMIN
+devices:
+  - /dev/net/tun
+options:
+  PANGOLIN_ENDPOINT: "https://app.pangolin.net"
+  CLIENT_ID: ""
+  CLIENT_SECRET: ""
+schema:
+  PANGOLIN_ENDPOINT: url
+  CLIENT_ID: str
+  CLIENT_SECRET: password
+map:
+  - config:rw
+hassio_api: true
+homeassistant_api: true
+auth_api: true
+hassio_role: "admin"
+
+# Made with Bob
