@@ -3,6 +3,8 @@
 [![GitHub Release](https://img.shields.io/github/release/RosaEinhorn/home-assistant-pangolin-cli-app.svg?style=flat-square)](https://github.com/RosaEinhorn/home-assistant-pangolin-cli-app/releases)
 [![License](https://img.shields.io/github/license/RosaEinhorn/home-assistant-pangolin-cli-app.svg?style=flat-square)](LICENSE)
 
+> **Note**: This app was created with the assistance of AI.
+
 A Home Assistant app (formerly called add-on) that runs the [Pangolin CLI client](https://github.com/fosrl/cli), enabling your Home Assistant instance to connect to private resources on your Pangolin network.
 
 ## About
@@ -62,6 +64,17 @@ This add-on allows Home Assistant to act as a Pangolin client, establishing an o
 | `PANGOLIN_ENDPOINT` | URL of your Pangolin server | `https://app.pangolin.net` |
 | `CLIENT_ID` | Client ID from Pangolin dashboard | `client_abc123...` |
 | `CLIENT_SECRET` | Client secret from Pangolin dashboard | `secret_xyz789...` |
+
+### Optional Settings
+
+| Option | Description | Example |
+|--------|-------------|---------|
+| `EXTRA_FLAGS` | Additional CLI flags for pangolin-cli | `--override-dns=false --mtu=1420` |
+
+**Available flags** (see [Pangolin CLI documentation](https://github.com/fosrl/cli) for full list):
+- `--override-dns=false` - Disable DNS override
+- `--mtu=<value>` - Set MTU size (default: 1280)
+- `--log-level=<level>` - Set log level (debug, info, warn, error)
 
 ### Getting Client Credentials
 
@@ -180,16 +193,6 @@ rest_command:
   check_private_api:
     url: "http://100.96.128.10/api/status"
     method: GET
-```
-
-### Using DNS Names
-
-If your Pangolin server has DNS configured, you can use hostnames instead of IPs:
-
-```yaml
-rest_command:
-  check_service:
-    url: "http://my-service.pangolin.local/api"
 ```
 
 ## Support
