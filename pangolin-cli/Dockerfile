@@ -2,7 +2,7 @@
 FROM ghcr.io/hassio-addons/base:14.0.0
 
 # Define the Pangolin CLI version
-ARG PANGOLIN_CLI_VERSION=0.5.1
+ARG PANGOLIN_CLI_VERSION=0.6.0
 ENV PANGOLIN_CLI_VERSION=${PANGOLIN_CLI_VERSION}
 
 # Install dependencies

@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to the Pangolin CLI Home Assistant App (formerly Add-on) will be documented in this file.
+## [1.1.0] - 2026-04-22
+
+### Changed
+- Updated Pangolin CLI from version 0.5.1 to 0.6.0
+
 
 ## [1.0.0] - 2026-03-08
 
