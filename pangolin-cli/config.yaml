@@ -1,5 +1,5 @@
 name: "Pangolin CLI"
-version: "1.0.0"
+version: "1.1.0"
 slug: "pangolin-cli"
 description: "Home Assistant app (formerly add-on) that connects to private Pangolin resources using the Pangolin CLI client"
 url: "https://github.com/RosaEinhorn/home-assistant-pangolin-cli-app"
